@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RollFour — Four-bar snare-roll & tom-fill desk</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="tap-overlay" class="overlay">Tap to start audio</div>
+<header>
+  <h1>RollFour</h1>
+  <p class="tagline">Four-bar live kit fills so a looping chorus finally has a place to hand off.</p>
+</header>
+<main>
+  <section class="controls">
+    <label>BPM <input type="number" id="bpm" min="60" max="180" value="92"></label>
+    <label>Key
+      <select id="key">
+        <option value="Am">Am</option>
+        <option value="C">C</option>
+        <option value="G">G</option>
+        <option value="Dm">Dm</option>
+        <option value="Em">Em</option>
+      </select>
+    </label>
+    <label>Bars <input type="number" id="bars" min="4" max="8" value="4"></label>
+    <label>Recipe
+      <select id="recipe">
+        <option value="snare-roll">Snare Roll → Crash</option>
+        <option value="tom-descent">Tom Descent</option>
+        <option value="half-time">Half-time Fill</option>
+        <option value="build-choke">Build & Choke</option>
+      </select>
+    </label>
+    <div class="buttons">
+      <button id="play">Play</button>
+      <button id="stop">Stop</button>
+      <button id="export-wav">Export WAV</button>
+      <button id="export-mid">Export MIDI</button>
+    </div>
+    <div id="status"></div>
+    <div id="playhead">Bar 1 · Beat 1</div>
+  </section>
+  <section class="info">
+    <h2>What it does</h2>
+    <p>Suno and loop DAWs slam sections together. Session players write a fill that hands the ear. RollFour seats live FluidR3 kit fills on the last bars so the chorus has somewhere to go.</p>
+    <p>Pinned samples from PreEight@d58301e. No oscillators. Audio never leaves the tab.</p>
+  </section>
+</main>
+<footer>
+  <p>One-time $19 · Lemon Squeezy · Finite desk · Distinct from WalkBass, SnapFour, TurnEight</p>
+  <p>iOS: silent switch mutes Web Audio. Tap to unlock audio.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
